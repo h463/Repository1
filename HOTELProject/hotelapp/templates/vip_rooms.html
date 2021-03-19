@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+{% extends 'base.html' %}
+{% block body_block %}
+<div class="container pt-3" align="center">
+    {% if rooms %}
+    <h1>Available Rooms</h1><br>
+    {% for room in rooms %}
+     <strong><a href="{{room.id}}">{{room.vip_rno}}</a></strong><br>
+    {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}
+</body>
+</html>
