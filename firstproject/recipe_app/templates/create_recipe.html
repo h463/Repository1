@@ -1,0 +1,10 @@
+<form action="/recipe_app/save_recipe/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    Name: <input type="text" name="name"/><br>
+    Ingredients: <input type="text" name="ingredients"/><br>
+    Process: <input type="text" name="process"/><br>
+    Image:<input type="file" name="image" /> <br>
+    <input type="submit" value="Save Recipe"/><br>
+</form>
+
+<a href="/recipe_app/logout/">Logout</a>

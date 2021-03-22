@@ -1,0 +1,13 @@
+{% if recipes %}
+    <h1>Recipes List</h1><br>
+    {% for each in recipes %}
+<a href="{% url 'recipe_app:detail' each.id %}">{{each.name}}</a>
+<a href="{% url 'recipe_app:delete' each.id %}"> delete</a><br>
+    {% endfor %}
+{% else %}
+    No Recipes Available
+{% endif %}
+
+<a href="/recipe_app/create/"> Create Recipe </a><br>
+
+<a href="/recipe_app/logout/">Logout</a>
